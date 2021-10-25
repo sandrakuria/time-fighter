@@ -23,9 +23,9 @@
             android:id="@+id/timertext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="100dp"
-            android:text="0.00"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="140dp"
+            android:text="0"
             android:textColor="@color/white"
             android:textSize="60sp" />
     </LinearLayout>

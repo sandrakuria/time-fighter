@@ -61,8 +61,8 @@ class HomeFragment : Fragment() {
         binding.timertext.text = seconds.toString()
         binding.linearLayout.setOnClickListener {
             binding.resultview.text = clickcount.toString()
-            clickcount++
 
+            clickcount++
         }
 
 
