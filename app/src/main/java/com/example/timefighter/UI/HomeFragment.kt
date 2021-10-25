@@ -23,9 +23,6 @@ class HomeFragment : Fragment() {
 
         binding.playbtn.setOnClickListener {
             startTimer()
-            binding.timertext.setOnClickListener {
-                clickcount++
-            }
         }
         binding.pausebtn.setOnClickListener {
             pauseTimer()
@@ -50,7 +47,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun pauseTimer(){
-        binding.timertext.text = time_in_ms.toString()
+
+        binding.timertext.text = (time_in_ms/1000).toString()
         uitimer.cancel()
         isRunning = false
     }
@@ -59,7 +57,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun updateTextUI(){
-        val seconds = (time_in_ms/1000)%60
+        val seconds = (time_in_ms/1000)
         binding.timertext.text = seconds.toString()
+        binding.linearLayout.setOnClickListener {
+            binding.resultview.text = clickcount.toString()
+            clickcount++
+
+        }
+
+
     }
 }
